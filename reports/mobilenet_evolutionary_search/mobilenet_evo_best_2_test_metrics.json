@@ -1,0 +1,46 @@
+{
+  "candidate_name": "best_2",
+  "best_candidate_config": {
+    "run_name": "mobilenet_evo_best_finetuned_2",
+    "image_size": 192,
+    "lr": 0.0001,
+    "weight_decay": 0.0003,
+    "active_brazing_boost": 1.0,
+    "augmentation": "medium"
+  },
+  "checkpoint": "models/checkpoints/mobilenet_evolutionary_search/mobilenet_evo_best_finetuned_2_best.pt",
+  "test_metrics": {
+    "accuracy": 0.8273672055427251,
+    "macro_f1": 0.704426024622999,
+    "weighted_f1": 0.8396959762455373,
+    "active_brazing_precision": 0.48663101604278075,
+    "active_brazing_recall": 0.4642857142857143,
+    "active_brazing_f1": 0.4751958224543081,
+    "confusion_matrix": [
+      [
+        916,
+        84,
+        0,
+        0
+      ],
+      [
+        9,
+        113,
+        16,
+        0
+      ],
+      [
+        0,
+        68,
+        91,
+        37
+      ],
+      [
+        0,
+        5,
+        80,
+        313
+      ]
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+name: brazing_stage_state_machine_v1
+
+stage_order:
+    - inactive_preparation
+    - flux_activation
+    - active_brazing
+    - stabilization
+
+stage_to_id:
+    inactive_preparation: 0
+    flux_activation: 1
+    active_brazing: 2
+    stabilization: 3
+
+allowed_sequence:
+    - inactive_preparation
+    - flux_activation
+    - active_brazing
+    - stabilization
+
+logic:
+    type: irreversible_majority_transition
+    min_confirm_frames: 3
+    window_size: 7
+    confidence_threshold: 0.0
+    allow_backward_transitions: false
+    allow_stage_skipping: false
+
+description: >
+    State machine v1 confirms transition only to the next technologically
+    valid stage using majority voting over recent raw neural predictions.
+    Once a stage is confirmed, backward transitions are forbidden.
+
+notes:
+    - "Selected after analysis in notebooks/06_stage_state_machine.ipynb."
+    - "Designed for stable operator stage output."
+    - "MVI_6265 is treated as a hard-case video due to unstable flux visibility and glare."

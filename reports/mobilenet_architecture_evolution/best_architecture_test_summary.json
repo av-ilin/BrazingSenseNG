@@ -1,0 +1,55 @@
+{
+  "best_candidate": {
+    "run_name": "mobilenet_arch_evo_039",
+    "head_type": "mlp_2",
+    "head_hidden": 256,
+    "head_bottleneck_ratio": 0.5,
+    "dropout": 0.1,
+    "activation": "hardswish",
+    "pooling": "avg_max",
+    "head_norm": "none",
+    "freeze_mode": "full"
+  },
+  "checkpoint": "models/checkpoints/mobilenet_architecture_evolution/mobilenet_arch_evo_039_best.pt",
+  "test_metrics": {
+    "accuracy": 0.901270207852194,
+    "macro_f1": 0.7791833999732863,
+    "weighted_f1": 0.8942062942663228,
+    "active_brazing_precision": 0.7578125,
+    "active_brazing_recall": 0.49489795918367346,
+    "active_brazing_f1": 0.5987654320987654,
+    "confusion_matrix": [
+      [
+        983,
+        17,
+        0,
+        0
+      ],
+      [
+        24,
+        83,
+        31,
+        0
+      ],
+      [
+        0,
+        31,
+        97,
+        68
+      ],
+      [
+        0,
+        0,
+        0,
+        398
+      ]
+    ]
+  },
+  "fixed_training_config": {
+    "image_size": 224,
+    "lr": 0.0001,
+    "weight_decay": 0.0003,
+    "active_brazing_boost": 1.2,
+    "augmentation": "low"
+  }
+}

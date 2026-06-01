@@ -1,0 +1,6 @@
+stage_name,pred_stage_name,count
+active_brazing,stabilization,68
+active_brazing,flux_activation,31
+flux_activation,active_brazing,31
+flux_activation,inactive_preparation,24
+inactive_preparation,flux_activation,17

@@ -1,0 +1,4 @@
+method,threshold,confirm_frames,num_videos,num_detected,num_missed,num_early,num_late,mae_s,mean_error_s,median_abs_error_s,max_abs_error_s,within_1.0s,within_2.0s
+stage_model_prob_active_brazing,0.2,7,3,3,0,0,3,0.6999999999999993,0.6999999999999993,0.8999999999999986,1.0,1.0,1.0
+cv_rule_trigger,0.5,5,3,3,0,1,2,0.8999999999999974,-0.3000000000000007,0.5999999999999979,1.7999999999999972,0.6666666666666666,1.0
+cv_binary_model_RandomForest,0.6,7,3,2,1,0,2,0.9499999999999993,0.9499999999999993,0.9499999999999993,1.5,0.5,1.0

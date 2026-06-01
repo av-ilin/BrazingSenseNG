@@ -1,0 +1,18 @@
+{
+  "total_frames": 3140,
+  "total_videos": 18,
+  "stage_counts": {
+    "inactive_preparation": 1872,
+    "flux_activation": 239,
+    "active_brazing": 497,
+    "stabilization": 532
+  },
+  "missing_frames": 0,
+  "short_intervals_lt_1s": 1,
+  "stage_order": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ]
+}

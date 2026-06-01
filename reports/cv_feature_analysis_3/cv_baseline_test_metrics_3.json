@@ -1,0 +1,64 @@
+{
+  "best_model": "LogisticRegression",
+  "test_metrics": {
+    "accuracy": 0.6218809980806143,
+    "macro_f1": 0.574042822414099,
+    "weighted_f1": 0.6903613977685413,
+    "confusion_matrix": [
+      [
+        199,
+        103,
+        0,
+        0
+      ],
+      [
+        6,
+        34,
+        1,
+        0
+      ],
+      [
+        0,
+        22,
+        33,
+        3
+      ],
+      [
+        0,
+        42,
+        20,
+        58
+      ]
+    ]
+  },
+  "stage_order": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ],
+  "feature_columns": [
+    "brightness_mean",
+    "brightness_std",
+    "value_mean",
+    "value_std",
+    "saturation_mean",
+    "saturation_std",
+    "hue_mean",
+    "lab_l_mean",
+    "lab_a_mean",
+    "lab_b_mean",
+    "red_mean",
+    "green_mean",
+    "blue_mean",
+    "red_green_diff",
+    "red_blue_diff",
+    "white_area_ratio",
+    "specular_highlight_ratio",
+    "dark_area_ratio",
+    "warm_area_ratio",
+    "edge_density",
+    "laplacian_var",
+    "frame_diff_score"
+  ]
+}

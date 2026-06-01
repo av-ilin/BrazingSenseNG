@@ -1,0 +1,120 @@
+{
+  "video_info": {
+    "video_path": "data/raw/MVI_6266.MOV",
+    "input_fps": 29.97002997002997,
+    "frame_count_reported": 1700,
+    "frame_width": 1280,
+    "frame_height": 720,
+    "frames_processed": 1700
+  },
+  "model": "mobilenet_v3_small",
+  "checkpoint": "models/checkpoints/mobilenet_evolutionary_search/mobilenet_evo_best_finetuned_best.pt",
+  "device": "cpu",
+  "roi": {
+    "x": 470,
+    "y": 280,
+    "w": 430,
+    "h": 290
+  },
+  "image_size": 224,
+  "postprocess": "state_machine",
+  "smoothing_window": 5,
+  "trigger_threshold": 0.4,
+  "trigger_confirm_frames": 1,
+  "enable_cv_trigger": false,
+  "cv_threshold": 0.38,
+  "cv_confirm_frames": 2,
+  "max_frames": null,
+  "num_frames_total": 1700,
+  "num_frames_used_after_warmup": 1670,
+  "warmup_frames": 30,
+  "metrics": {
+    "frame_read_ms": {
+      "mean": 2.2013964964201307,
+      "std": 1.6680118577270378,
+      "min": 1.1772290017688647,
+      "max": 20.88722400003462,
+      "p50": 1.7212514976563398,
+      "p90": 3.435110302234534,
+      "p95": 4.2503799488258664,
+      "p99": 10.994878849742227
+    },
+    "preprocess_ms": {
+      "mean": 5.1223641850963455,
+      "std": 1.5740106897706014,
+      "min": 2.729944000748219,
+      "max": 13.85693399788579,
+      "p50": 4.689717001383542,
+      "p90": 8.207873001447297,
+      "p95": 8.779278250040077,
+      "p99": 10.52430167983402
+    },
+    "model_ms": {
+      "mean": 14.28031616172714,
+      "std": 3.862903332856009,
+      "min": 10.357623999880161,
+      "max": 44.325833001494175,
+      "p50": 12.541252999653807,
+      "p90": 20.853142101987036,
+      "p95": 22.865302698664888,
+      "p99": 26.81437742143316
+    },
+    "neural_trigger_ms": {
+      "mean": 0.0015926257312272726,
+      "std": 0.0012050858110616524,
+      "min": 0.0007509988790843636,
+      "max": 0.018948001525131986,
+      "p50": 0.0014534998626913875,
+      "p90": 0.0019779985450441018,
+      "p95": 0.0021600990294246003,
+      "p99": 0.0029206581530161154
+    },
+    "cv_trigger_ms": {
+      "mean": 0.0010669754521292496,
+      "std": 0.0010309472641312836,
+      "min": 0.0006970003596507013,
+      "max": 0.033382999390596524,
+      "p50": 0.0009704999683890492,
+      "p90": 0.0012781001714756714,
+      "p95": 0.001389750468661077,
+      "p99": 0.0016384090122301125
+    },
+    "postprocess_ms": {
+      "mean": 0.014157923341301426,
+      "std": 0.004998345093105881,
+      "min": 0.007353999535553157,
+      "max": 0.051017999794567004,
+      "p50": 0.015022000297904015,
+      "p90": 0.019176100977347232,
+      "p95": 0.02071020171570126,
+      "p99": 0.03286830022261711
+    },
+    "total_ms": {
+      "mean": 21.687018441346204,
+      "std": 5.965148810135335,
+      "min": 14.335349998873426,
+      "max": 57.55251799928374,
+      "p50": 18.868602501243004,
+      "p90": 33.00121889842558,
+      "p95": 34.7525417982979,
+      "p99": 40.73616375011624
+    },
+    "fps_estimate_mean": 46.11053394474477,
+    "fps_estimate_p95": 28.774873671225333,
+    "target_50ms": {
+      "mean_total_ms_le_50": true,
+      "p95_total_ms_le_50": true
+    },
+    "trigger_counts": {
+      "neural_trigger_on_frames": 735,
+      "cv_trigger_on_frames": 0,
+      "hold_signal_on_frames": 735
+    },
+    "predicted_stage_counts": {
+      "active_brazing": 101,
+      "flux_activation": 138,
+      "inactive_preparation": 811,
+      "stabilization": 620
+    }
+  }
+}

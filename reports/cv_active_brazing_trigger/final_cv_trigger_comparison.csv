@@ -1,0 +1,4 @@
+method,score_col,threshold,confirm_frames,num_videos,num_detected,num_missed,num_early,num_late,mae_s,max_abs_error_s,within_1.0s,within_2.0s,mean_error_s,median_abs_error_s
+stage_model_prob_active_brazing,prob_active_brazing,0.2,7,3,3,0,0,3,0.6999999999999993,1.0,1.0,1.0,,
+best_cv_rule,score_cv_v1_motion_texture,0.5,5,3,3,0,0,2,0.6666666666666666,1.1000000000000014,0.6666666666666666,1.0,0.6666666666666666,0.8999999999999986
+best_cv_binary_ml_RandomForest,score_binary_RandomForest,0.6,1,3,2,1,1,1,1.4999999999999982,2.299999999999997,0.5,0.5,-0.7999999999999989,1.4999999999999982

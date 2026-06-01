@@ -1,0 +1,113 @@
+{
+  "seed": 42,
+  "stage_order": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ],
+  "original_total_frames": 3140,
+  "original_total_videos": 18,
+  "total_frames": 2580,
+  "total_videos": 15,
+  "blacklist": {
+    "enabled": true,
+    "requested_videos": [
+      "MVI_6270",
+      "MVI_6273",
+      "MVI_6278"
+    ],
+    "matched_videos": [
+      "MVI_6270",
+      "MVI_6273",
+      "MVI_6278"
+    ],
+    "num_matched_videos": 3,
+    "num_excluded_frames": 560,
+    "excluded_frames_by_stage": {
+      "inactive_preparation": 276,
+      "flux_activation": 21,
+      "active_brazing": 168,
+      "stabilization": 95
+    },
+    "excluded_frames_by_video": {
+      "MVI_6270": 159,
+      "MVI_6273": 232,
+      "MVI_6278": 169
+    }
+  },
+  "splits": {
+    "train": {
+      "videos": [
+        "MVI_6268",
+        "MVI_6269",
+        "MVI_6272",
+        "MVI_6274",
+        "MVI_6275",
+        "MVI_6276",
+        "MVI_6277",
+        "MVI_6281",
+        "MVI_6282",
+        "MVI_6283"
+      ],
+      "num_videos": 10,
+      "num_frames": 1731,
+      "frames_by_stage": {
+        "inactive_preparation": 1072,
+        "flux_activation": 148,
+        "active_brazing": 229,
+        "stabilization": 282
+      },
+      "frames_by_video": {
+        "MVI_6268": 148,
+        "MVI_6269": 156,
+        "MVI_6272": 198,
+        "MVI_6274": 182,
+        "MVI_6275": 177,
+        "MVI_6276": 171,
+        "MVI_6277": 199,
+        "MVI_6281": 153,
+        "MVI_6282": 170,
+        "MVI_6283": 177
+      }
+    },
+    "val": {
+      "videos": [
+        "MVI_6271",
+        "MVI_6280"
+      ],
+      "num_videos": 2,
+      "num_frames": 328,
+      "frames_by_stage": {
+        "inactive_preparation": 222,
+        "flux_activation": 29,
+        "active_brazing": 42,
+        "stabilization": 35
+      },
+      "frames_by_video": {
+        "MVI_6271": 161,
+        "MVI_6280": 167
+      }
+    },
+    "test": {
+      "videos": [
+        "MVI_6265",
+        "MVI_6266",
+        "MVI_6279"
+      ],
+      "num_videos": 3,
+      "num_frames": 521,
+      "frames_by_stage": {
+        "inactive_preparation": 302,
+        "flux_activation": 41,
+        "active_brazing": 58,
+        "stabilization": 120
+      },
+      "frames_by_video": {
+        "MVI_6265": 169,
+        "MVI_6266": 171,
+        "MVI_6279": 181
+      }
+    }
+  }
+}

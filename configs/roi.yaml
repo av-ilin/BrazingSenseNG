@@ -1,0 +1,17 @@
+default_roi:
+    x: 470
+    y: 280
+    w: 430
+    h: 290
+
+description: "Default ROI around the waveguide brazing area."
+
+coordinate_system:
+    origin: "top_left"
+    format: "x,y,w,h"
+
+notes:
+    - "ROI was selected manually using notebooks/02_roi_selection.ipynb."
+    - "The selected ROI focuses on the waveguide, flux area, lower seam, and visible solder flow zones."
+    - "The same ROI is used for all videos in the first OpenCV baseline."
+    - "This ROI intentionally reduces background and fixture area to improve classical feature extraction."

@@ -1,0 +1,4 @@
+model,image_size,best_val_macro_f1,best_val_accuracy,best_val_active_brazing_f1,best_val_active_brazing_recall,checkpoint
+resnet18,96,0.8755869641155902,0.9340054995417049,0.8686868686868687,0.9347826086956522,models/checkpoints/resnet_input_size_cpu/resnet18_96_best.pt
+resnet18,64,0.8642174897851039,0.9349220898258478,0.8598726114649682,0.9782608695652174,models/checkpoints/resnet_input_size_cpu/resnet18_64_best.pt
+resnet18,128,0.8633394608574091,0.9340054995417049,0.8825622775800712,0.8985507246376812,models/checkpoints/resnet_input_size_cpu/resnet18_128_best.pt

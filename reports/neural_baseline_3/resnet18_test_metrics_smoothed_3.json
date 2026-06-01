@@ -1,0 +1,49 @@
+{
+  "model": "resnet18",
+  "checkpoint": "models/checkpoints/neural_baseline_3/resnet18_best_3.pt",
+  "window_size": 5,
+  "test_metrics": {
+    "accuracy": 0.9366602687140115,
+    "macro_f1": 0.847701986857887,
+    "weighted_f1": 0.9315315034033843,
+    "confusion_matrix": [
+      [
+        299,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        41,
+        0,
+        0
+      ],
+      [
+        0,
+        19,
+        28,
+        11
+      ],
+      [
+        0,
+        0,
+        0,
+        120
+      ]
+    ]
+  },
+  "stage_order": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ],
+  "roi": {
+    "x": 470,
+    "y": 280,
+    "w": 430,
+    "h": 290
+  },
+  "image_size": 224
+}

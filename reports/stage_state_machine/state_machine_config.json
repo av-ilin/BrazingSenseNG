@@ -1,0 +1,25 @@
+{
+  "stage_order": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ],
+  "allowed_sequence": [
+    "inactive_preparation",
+    "flux_activation",
+    "active_brazing",
+    "stabilization"
+  ],
+  "min_confirm_frames": 3,
+  "window_size": 7,
+  "confidence_threshold": 0.0,
+  "use_probabilities": true,
+  "fps": 10,
+  "notes": [
+    "State machine selected using 10 FPS test predictions.",
+    "Transitions are allowed only to the next stage.",
+    "Backward transitions are forbidden.",
+    "A transition is confirmed after enough votes for the next stage in the recent window."
+  ]
+}

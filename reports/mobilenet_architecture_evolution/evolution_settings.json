@@ -1,0 +1,55 @@
+{
+  "initial_population_size": 12,
+  "num_generations": 4,
+  "num_parents": 4,
+  "num_mutations": 6,
+  "num_crossovers": 6,
+  "mutation_prob": 0.35,
+  "crossover_mutation_prob": 0.2,
+  "search_epochs": 10,
+  "fixed_training_config": {
+    "image_size": 224,
+    "lr": 0.0001,
+    "weight_decay": 0.0003,
+    "active_brazing_boost": 1.2,
+    "augmentation": "low"
+  },
+  "search_space": {
+    "head_type": [
+      "linear",
+      "mlp_1",
+      "mlp_2"
+    ],
+    "head_hidden": [
+      128,
+      256,
+      512
+    ],
+    "head_bottleneck_ratio": [
+      0.5,
+      1.0
+    ],
+    "dropout": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "activation": [
+      "relu",
+      "hardswish",
+      "gelu"
+    ],
+    "pooling": [
+      "avg",
+      "avg_max"
+    ],
+    "head_norm": [
+      "none",
+      "batchnorm"
+    ],
+    "freeze_mode": [
+      "last_blocks",
+      "full"
+    ]
+  }
+}

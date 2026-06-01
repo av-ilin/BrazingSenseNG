@@ -1,0 +1,90 @@
+stages:
+    0:
+        name: inactive_preparation
+        display_name: "Inactive / Preparation"
+        ru_name: "Неактивная фаза / подготовка"
+        operator_message: "Активная фаза пайки не обнаружена"
+        description: >
+            Подготовительное или слабоактивное состояние процесса.
+            Видимые изменения в зоне пайки отсутствуют или выражены слабо.
+        expected_visual_features:
+            - "зона пайки визуально стабильна"
+            - "нет выраженного блеска расплава"
+            - "нет заметного протекания припоя"
+        critical_event: false
+
+    1:
+        name: flux_activation
+        display_name: "Flux Activation"
+        ru_name: "Активация флюса"
+        operator_message: "Обнаружены признаки активации флюса"
+        description: >
+            Стадия, на которой флюс переходит в активное состояние:
+            меняет внешний вид, становится менее белым или более прозрачным,
+            могут появляться испарения и локальные изменения поверхности.
+        expected_visual_features:
+            - "изменение оттенка флюса"
+            - "переход флюса от белого состояния к более прозрачному"
+            - "возможное появление испарений"
+            - "локальное изменение блеска поверхности"
+        critical_event: true
+
+    2:
+        name: active_brazing
+        display_name: "Active Brazing"
+        ru_name: "Активная пайка"
+        operator_message: "Обнаружены признаки плавления и протекания припоя"
+        description: >
+            Основная активная стадия пайки. На этом этапе припой переходит
+            в жидкое состояние и начинает протекать в технологические зазоры
+            или отверстия волноводной сборки.
+        expected_visual_features:
+            - "появление выраженного блеска расплава"
+            - "изменение формы жидкой области"
+            - "визуальное протекание припоя"
+            - "заполнение технологических зазоров или отверстий"
+        critical_event: true
+
+    3:
+        name: stabilization
+        display_name: "Stabilization"
+        ru_name: "Стабилизация"
+        operator_message: "Активная фаза завершена, идёт стабилизация процесса"
+        description: >
+            Стадия после активного протекания припоя. Видимое движение расплава
+            уменьшается, поверхность становится более стабильной, процесс переходит
+            к выдержке или завершению.
+        expected_visual_features:
+            - "уменьшение видимого движения расплава"
+            - "стабилизация блеска и формы области пайки"
+            - "отсутствие активного протекания припоя"
+            - "постепенное завершение видимых изменений"
+        critical_event: false
+
+transitions:
+    allowed:
+        - from: inactive_preparation
+          to: flux_activation
+
+        - from: flux_activation
+          to: active_brazing
+
+        - from: active_brazing
+          to: stabilization
+
+    forbidden_backward_transitions: true
+
+runtime_logic:
+    min_confidence: 0.60
+    smoothing_window_frames: 5
+    min_frames_to_confirm_transition: 3
+    keep_previous_stage_on_low_confidence: true
+
+events:
+    flux_activation_detected:
+        stage: flux_activation
+        message: "Критическое событие: обнаружена активация флюса"
+
+    active_brazing_detected:
+        stage: active_brazing
+        message: "Критическое событие: обнаружено плавление и протекание припоя"

@@ -1,0 +1,7 @@
+# Jupyter / notebook environment
+jupyter>=1.0.0,<2.0.0
+ipykernel>=6.29.0,<7.0.0
+notebook>=7.0.0,<8.0.0
+
+# Optional interactive / utility tools
+ipywidgets>=8.1.0,<9.0.0
